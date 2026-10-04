@@ -161,16 +161,18 @@ Chạy script và điền kết quả vào bảng:
 
 | Metric | Kết quả |
 |---|---|
-| Thời gian load data | |
-| Thời gian training | |
-| Best iteration | |
-| AUC-ROC | |
-| Accuracy | |
-| F1-Score | |
-| Precision | |
-| Recall | |
-| Inference latency (1 row) | |
-| Inference throughput (1000 rows) | |
+| Thời gian load data | 2.38 s |
+| Thời gian training | 11.043 s |
+| Best iteration | 275 |
+| AUC-ROC | 0.978 |
+| Accuracy | 0.9995 |
+| F1-Score | 0.8449 |
+| Precision | 0.8876 |
+| Recall | 0.8061 |
+| Inference latency (1 row) | 1.817 ms (p95: 1.857 ms) |
+| Inference throughput (1000 rows) | 11.212 ms (~89,188 rows/s) |
+
+*Cấu hình: EC2 `t3.medium` (2 vCPU, 4 GB RAM), LightGBM không dùng class weight, early stopping theo AUC, ngưỡng quyết định 0.25 (chọn tối ưu F1 trên tập validation).*
 
 ---
 
